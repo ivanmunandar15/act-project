@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🧪 PT Anindya Certification Testing – Laboratory Dashboard
 
-First, run the development server:
+A **Next.js** application built for **PT Anindya Certification Testing**, providing an integrated dashboard system for managing laboratory operations such as **inventory**, **loans**, **environmental monitoring**, and **tool barcode scanning**.
+
+---
+
+## 🚀 Project Overview
+
+This web application serves as an internal management and tracking tool for laboratory operations.
+It provides several key modules to enhance efficiency and traceability:
+
+* **Dashboard** – Display key metrics and summaries.
+* **Inventory** – Manage laboratory tools and equipment data.
+* **Loans** – Record and track equipment lending activities.
+* **Monitoring** – Monitor environmental parameters such as temperature and humidity.
+* **Scan** – *(New feature)* Barcode-based tool identification and loan management.
+
+---
+
+## 🧩 Tech Stack
+
+| Category           | Technology                                                                    |
+| ------------------ | ----------------------------------------------------------------------------- |
+| Frontend Framework | [Next.js 14+ (App Router)](https://nextjs.org/)                               |
+| UI Components      | [shadcn/ui](https://ui.shadcn.com/), [Tailwind CSS](https://tailwindcss.com/) |
+| State Management   | React Hooks / Context API                                                     |
+| Icons              | [lucide-react](https://lucide.dev/icons)                                      |
+
+---
+
+## 🧠 Core Features
+
+### 🖥 Dashboard
+
+* Displays quick stats from inventory, loans, and monitoring data.
+* Uses **StatCard** components to visualize summary info.
+
+### 📦 Inventory
+
+* Lists all laboratory tools and their current status.
+* Search and filter functionality.
+* Built with reusable **Table** and **StatusBadge** components.
+
+### 🔄 Loans
+
+* Tracks borrowed tools and return dates.
+* Integrates with the **Scan** module for automated barcode input.
+
+### 🌡 Monitoring
+
+* Displays environmental conditions such as **temperature** and **humidity**.
+* Can be integrated with real sensor data (ESP32 + humidity sensors).
+
+### 📷 Scan
+
+* Uses **BarcodeScanner** (Webcam-based) for tool identification.
+* Displays **ToolDetailModal** and **LoanFormModal** dynamically.
+* Future-ready for integration with **real-time inventory validation**.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/ivanmunandar15/act-project.git
+cd act-project
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access the app at 👉 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Development Notes
 
-## Learn More
+* The project currently uses **dummy data** stored in `/src/data/`.
+* All pages are **server components** by default using **Next.js App Router**.
+* **shadcn/ui** components can be customized via Tailwind theme extension.
+* Barcode scanning uses the **MediaDevices.getUserMedia** API (browser-based).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Contributors
 
-## Deploy on Vercel
+**PT Anindya Certification Testing – Laboratory Systems Team**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project is for internal use at **PT Anindya Certification Testing**.
+All rights reserved © 2025.
+
+---
